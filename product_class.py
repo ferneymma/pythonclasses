@@ -37,3 +37,4 @@ articulos = [
         "valor": 31000
     }
 ]
+ print(1)
