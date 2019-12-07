@@ -1,25 +1,12 @@
 from usuario_class import compradores
+from function_class import existe_usuario
 from compra_class import facturas_venta
 from product_class import articulos
 
 flag_exist_id = input('Are you registered? Y/N ')
 
 #id_usuario = int(input('Enter your ID: '))
-if flag_exist_id.upper() == 'N':
-    nombre = input('Enter your name: ')
-    apellido = input('Enter your lastname: ')
-    email= input('Enter your email address: ')
-    id_user = None
-    for usuario in compradores:
-        if id_user is None or id_user <= usuario.get('id_usuario'):
-            id_user = usuario.get('id_usuario')+1
-            continue
-    compradores.append({
-            "nombre": nombre,
-            "apellidos": apellido,
-            "id_usuario": id_user,
-            "email": email
-    })
+existe_usuario(flag_exist_id)
 
 print(compradores)
 
